@@ -1,5 +1,6 @@
 package com.mayank.diceroll;
 
+import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -15,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView txt,txt2;
     private Button button;
     public Random myrandom = new Random();
+    MediaPlayer m1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,10 +28,12 @@ public class MainActivity extends AppCompatActivity {
         txt=findViewById(R.id.textView);
         txt2=findViewById(R.id.textView2);
         button=findViewById(R.id.button);
+        m1 = MediaPlayer.create(this,R.raw.rolling);
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                m1.start();
                 int myRan = myrandom.nextInt(6)+1;
                 int myRan2 = myrandom.nextInt(6)+1;
                 switch (myRan){
