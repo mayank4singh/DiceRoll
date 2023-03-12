@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 m1.start();
-                int myRan = myrandom.nextInt(6)+1;
+               int myRan = myrandom.nextInt(6)+1;
                 int myRan2 = myrandom.nextInt(6)+1;
                 switch (myRan){
                     case 1:
